@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Focus</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<style>
+		img{display: block;}
+		.box{position: relative;width: 570px;height: 510px;}
+		.draw{float: left;}
+		.button{float: left;width: 190px;height: 170px;background: url(images/9.jpg) 0 0 no-repeat;}
+		.button:hover{background: url(images/11.jpg) 0 0 no-repeat;}
+		#shade{position: absolute;width: 190px;height: 170px;background: #ff7300;opacity: 0.5;top: 0;left: 0;}
+		/*.draw_1{top: 0;left: 0;}
+		.draw_2{top: 0;left: 190px;}
+		.draw_3{top: 0;left: 380px;}
+		.draw_4{top: 170px;left: 0;}
+		.draw_5{top: 170px;left: 380px;}
+		.draw_6{top: 340px;left: 0;}
+		.draw_7{top: 340px;left: 190px;}
+		.draw_8{top: 340px;left: 380px;}*/
+	</style>
+</head>
+<body>
+
+<div class="box" id="box">
+	<img src="images/1.jpg" alt="" class="draw draw_1" />
+	<img src="images/2.jpg" alt="" class="draw draw_2" />
+	<img src="images/3.jpg" alt="" class="draw draw_3" />
+	<img src="images/4.jpg" alt="" class="draw draw_4" />
+	<a href="javascript:;" id="btn" class="button"></a>
+	<img src="images/5.jpg" alt="" class="draw draw_5" />
+	<img src="images/6.jpg" alt="" class="draw draw_6" />
+	<img src="images/7.jpg" alt="" class="draw draw_7" />
+	<img src="images/8.jpg" alt="" class="draw draw_8" />
+</div>
+
+
+<script>
+window.onload = function(){
+	var btn = document.getElementById("btn"),
+		box = document.getElementById("box"),
+		imgs = box.getElementsByTagName('img'),
+		flag = true,
+		posArr = [];
+
+	function initial(){
+
+	}
+	initial();
+
+	var addShade = function(){
+		var div = document.createElement("div");
+		div.id = "shade";
+		box.appendChild(div);
+	}
+
+	btn.onclick = function(){
+		if(addShade){
+			addShade();
+			addShade = null;
+		}
+		
+		startDraw();
+	};
+
+	function startDraw(){
+		if(!flag) return;
+		flag = false;
+
+		for(var i = 0, len = imgs.length; i < len; i++){
+
+		}
+
+	}
+
+
+
+
+
+
+}
+
+
+
+
+</script>
+</body>
+</html>
