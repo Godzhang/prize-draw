@@ -67,7 +67,7 @@ window.onload = function(){
 					lottery.speed = 500;
 				}else{
 					//51-60次之间速度小幅度变慢
-					lottery.speed += 50;
+					lottery.speed += 30;
 				}
 			}
 			
